@@ -1,3 +1,3 @@
-const BASE_API_URL = `http://quiz-app-at-api.herokuapp.com`;
+const BASE_API_URL = `http://localhost:3000`;
 
 $('document').ready(async () => await createQuizzesCards());
