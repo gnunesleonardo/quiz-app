@@ -1,6 +1,6 @@
 const getQuizDataById = async (quizId) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/quiz?quizId=${quizId}`, {
+    const response = await fetch(`${BASE_API_URL}/api/quiz?quizId=${quizId}`, {
       method: 'GET'
     });
     const json = await response.json();
