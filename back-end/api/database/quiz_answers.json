@@ -1,0 +1,24 @@
+[
+  {
+    "answer_id": "1",
+    "quiz_id": "1",
+    "answer_author": "Leonardo Gomes Nunes",
+    "creation_date": "2020-10-29",
+    "quiz_answers": [
+      "Curabitur non justo mi",
+      "Praesent dui ex, faucibus eu lectus eu, suscipit pellentesque eros",
+      "Donec consectetur aliquet justo"
+    ]
+  },
+  {
+    "quiz_id": "1",
+    "answer_author": "Porter Robinson",
+    "creation_date": "2020-10-29",
+    "quiz_answers": [
+      "Faucibus eu lectus eu",
+      "Cras imperdiet vitae",
+      "Praesent dui ex"
+    ],
+    "answer_id": 2
+  }
+]

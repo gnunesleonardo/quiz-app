@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="css/libs/toastr.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Raleway">
+  <title>Quiz App - Agrotools</title>
+</head>
+
+<body>
+  <nav style="height: 115px;" class="navbar navbar-light bg-light">
+    <div class="container text-center">
+      <a class="navbar-brand text-left" href="#">
+        <img src="img/logo-agrotools.png" width="60%" height="60%" alt="" loading="lazy">
+      </a>
+      <p class="text-right justify-content-center">Leonardo Gomes Nunes</>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="text-center">
+      <button type="button" class="btn btn-custom btn-block mt-4 mb-4" data-toggle="modal" data-target="#modal-create-quiz">Cadastrar Questionário</button>
+      <h1 class="mb-4 mt-4">Questionários Cadastrados</h1>
+      <div id="load-spin" style="display: hide;" class="spinner-border" role="status">
+        <span class="sr-only">Carregando...</span>
+      </div>
+    </div>
+
+    <!-- QUIZ CARDS -->
+    <div id="quiz-cards" class="row justify-content-center text-center">
+    </div>
+
+    <!-- CREATE QUIZ MODAL -->
+    <div id="modal-create-quiz" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      aria-labelledby="modal-create-quiz-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cadastrar Questionário</h5>
+          </div>
+          <div class="modal-body">
+            <form id="form-create-quiz">
+              <label class="mt-2" for="quiz-title"><b>Título</b></label>
+              <input type="text" class="form-control" id="quiz-title" value="" required>
+              <label class="mt-2" for="quiz-author"><b>Autor</b></label>
+              <input type="text" class="form-control" id="quiz-author" value="" required>
+              <label class="mt-2" for="question1"><b>Pergunta 1</b></label>
+              <input type="text" class="form-control" id="question1" value="" required>
+            </form>
+            <button id="add-question" type="submit" value="1" class="btn btn-custom mt-2">Adicionar Pergunta</button>
+          </div>
+          <div class="modal-footer">
+            <button id="create-quiz-btn" type="button" class="btn btn-custom" data-dismiss="modal">Cadastrar</button>
+            <button type="button" class="btn btn-custom" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREATE ANSWER MODAL -->
+    <div id="modal-create-answer" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      aria-labelledby="modal-create-answer-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modal-create-answer-title" class="modal-title"></h5>
+          </div>
+          <div>
+          </div>
+          <div class="modal-body">
+            <form id="form-create-answer">
+              <label class="mt-2" for="answer-author"><b>Autor</b></label>
+              <input type="text" class="form-control" id="answer-author" value="" required>
+              <h4 class="mt-4">Perguntas :</h4>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="create-answer-btn" value="" type="button" class="btn btn-custom">Enviar</button>
+            <button type="button" class="btn btn-custom" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- VIEW ANSWERS MODAL -->
+    <div id="modal-view-answers" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      aria-labelledby="modal-view-answers-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modal-view-answers-title" class="modal-title"></h5>
+          </div>
+          <div>
+          </div>
+          <div id="modal-view-answers-body" class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIBS -->
+  <script src="js/libs/jquery-3.5.1.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/toastr.min.js"></script>
+  <script src="js/libs/moment.min.js"></script>
+  
+  <!-- MAIN SCRIPTS -->
+  <script src="js/index.js"></script>
+  <script src="js/handleCreateAnswerModal.js"></script>
+  <script src="js/handleCreateQuizModal.js"></script>
+  <script src="js/handleViewAnswersModal.js"></script>
+  <script src="js/handleQuizCards.js"></script>
+</body>
+
+</html>
